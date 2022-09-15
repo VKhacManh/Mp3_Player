@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.navbar {
+  height: 60px;
+  width: 100%;
+  background-image: linear-gradient(to right bottom, #ff6bcb, #ffb86c);
+  padding: 12px 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+
+.navbar-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  font-size: 35px;
+}
+
+.icon-menu,
+.icon-setting {
+  cursor: pointer;
+}
+
+.music {
+  max-width: 500px;
+  margin: 10% auto;
+  border-radius: 12px;
+  /* background-color: #fff; */
+  box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+  position: relative;
+  height: 500px;
+}
+
+.image, .image img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  height: inherit;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.wrapper {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 30px;
+  top: 0;
+  left: 0;
+}
+
+.timer,
+.range {
+  padding: 0 25px;
+}
+
+.music-thumb {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto 25px;
+}
+
+.music-thumb img {
+  border-radius: 100rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 0 3px #ffb86c, 0 0 0 6px #fff, 0 0 0 9px #ff6bcb;
+}
+
+.music-thumb.is-playing {
+  animation: spinner 5s infinite linear;
+}
+
+.music-name {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Seaweed Script", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  text-shadow: 2px 2px 8px rgb(100, 100, 111);
+}
+
+.music-singer {
+  margin: -10px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: rgb(124, 124, 124);
+  text-shadow: 2px 2px 8px rgb(100, 100, 111);
+
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(107, 107, 107);
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 8px rgb(100, 100, 111);
+
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 40px;
+}
+
+.play {
+  position: relative;
+}
+
+.play::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right bottom, #ff6bcb, #ffb86c);
+  transform: scale(1.5);
+  border-radius: 100rem;
+}
+.player-inner {
+  width: 50px;
+  height: 50px;
+  border-radius: 100rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-size: 40px;
+  position: relative;
+  z-index: 2;
+}
+.play-infinite,
+.play-repeat,
+.play-back,
+.play-forward {
+  cursor: pointer;
+}
+
+.range {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+.range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  background-color: #eeee;
+  margin-bottom: 20px;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #20e3b2;
+  width: 15px;
+  height: 15px;
+  border-radius: 100rem;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px rgba(100, 100, 111, 0.05);
+  margin-top: -6px;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.play-infinite,
+.play-repeat {
+  font-size: 20px;
+}
