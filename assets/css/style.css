@@ -82,6 +82,7 @@ body {
   height: inherit;
   border-radius: 12px;
   object-fit: cover;
+  user-select: none;
 }
 
 .wrapper {
@@ -103,6 +104,7 @@ body {
   width: 100px;
   height: 100px;
   margin: 20px auto 25px;
+  user-select: none;
 }
 
 .music-thumb img {
@@ -126,6 +128,7 @@ body {
   font-size: 40px;
   font-weight: 400;
   text-shadow: 2px 2px 8px rgb(100, 100, 111);
+  user-select: none;
 }
 
 .music-singer {
@@ -135,6 +138,7 @@ body {
   font-size: 20px;
   color: rgb(124, 124, 124);
   text-shadow: 2px 2px 8px rgb(100, 100, 111);
+  user-select: none;
 
 }
 
@@ -146,6 +150,7 @@ body {
   color: rgb(107, 107, 107);
   margin-bottom: 40px;
   text-shadow: 2px 2px 8px rgb(100, 100, 111);
+  user-select: none;
 
 }
 
